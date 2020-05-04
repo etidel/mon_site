@@ -39,9 +39,16 @@ echo " <html>
 <h4> liste users </h4>
 <table border=2><tr><th>name</th><th>email</th></tr>
 <?php 
+<<<<<<< HEAD
 \$bdd = new PDO('mysql:host = 192.168.56.20.;dbname=db_app', 'admin','admin');
 \$response = \$bdd ->query('select *from inscription');
 while (\$d = \$response ->fetch ()) { ?><tr><td><?php echo \$d['name']; ?></td>
 <td><?php echo \$d['email']; ?></td></tr> 
+=======
+\$bdd = new PDO('mysql:host=192.168.56.20.;dbname=db_app', 'admin','admin');
+\$response = \$bdd ->query('select *from produit');
+while (\$d = \$response ->fetch ()) { ?><tr><td><?php echo \$d['name']; ?></td>
+<td><?php echo \$d['email]; ?></td></tr> 
+>>>>>>> 6f2ddecf632b7a3c29b4b355b6f5d40991c26a64
 <?php } ?>
 </table></body></html>" > index.php 
